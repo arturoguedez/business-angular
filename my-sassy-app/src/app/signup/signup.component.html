@@ -1,0 +1,14 @@
+<p>
+  signup works!
+</p>
+
+
+<div>
+  <label>Company Name:
+      <input [(ngModel)]="form.companyName" placeholder="name">
+    </label>
+</div>
+
+<div *ngIf="form">
+  <p>{{form.companyName}}</p>
+</div>
