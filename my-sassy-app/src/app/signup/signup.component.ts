@@ -7,16 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  form: SignupForm;
+  model: SignupForm;
 
   constructor() { }
 
   ngOnInit() {
-    this.form = new SignupForm();
+    this.model = new SignupForm();
   }
-
+  onSubmit(): void {
+    console.log("here is the form");
+    console.log(JSON.stringify(this.model));
+  }
 }
 
 export class SignupForm {
   companyName: string;
+  email: string;
+  password: string;
 }
