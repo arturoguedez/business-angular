@@ -9,7 +9,15 @@ export class SignupComponent implements OnInit {
 
   model: SignupForm;
 
-  constructor() { }
+  companyNameInputFocus: boolean;
+  emailInputFocus: boolean;
+  passwordInputFocus: boolean;
+
+  constructor() {
+    this.companyNameInputFocus = false;
+    this.emailInputFocus = false;
+    this.passwordInputFocus = false;
+  }
 
   ngOnInit() {
     this.model = new SignupForm();

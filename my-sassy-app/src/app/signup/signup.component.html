@@ -16,7 +16,8 @@
           </div>
 
           <div *ngIf="companyName.errors.minlength">
-            Company Name must be at least 2 characters long.
+
+            <ng-container i18n="@@signup_company_name_error_minlength">Company Name must be at least 2 characters long.</ng-container>
           </div>
         </div>
 
