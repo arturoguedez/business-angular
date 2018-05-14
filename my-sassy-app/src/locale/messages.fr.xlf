@@ -2,9 +2,53 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="signup_company_name_error_minlength" datatype="html">
+      <trans-unit id="registration" datatype="html">
+        <source>Enregistrement</source>
+        <target>Enregistrement</target>
+      </trans-unit>
+      <trans-unit id="company_name" datatype="html">
+        <source>Company Name</source>
+        <target>Nom de la compagnie</target>
+      </trans-unit>
+      <trans-unit id="company_name_required" datatype="html">
+        <source>Company Name is required.</source>
+        <target>Le nom de l'entreprise est requis.</target>
+      </trans-unit>
+      <trans-unit id="company_name_minlength" datatype="html">
         <source>Company Name must be at least 2 characters long.</source>
         <target>Le nom de l'entreprise doit comporter au moins 2 caractères.</target>
+      </trans-unit>
+      <trans-unit id="email_address" datatype="html">
+        <source>Email address</source>
+        <target>Adresse e-mail</target>
+      </trans-unit>
+      <trans-unit id="email_required" datatype="html">
+        <source>Email is required.</source>
+        <target>Le courriel est requis</target>
+      </trans-unit>
+      <trans-unit id="email_format_invalid" datatype="html">
+        <source>Invalid email format</source>
+        <target>Format d'email invalide</target>
+      </trans-unit>
+      <trans-unit id="password" datatype="html">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="password_required" datatype="html">
+        <source>Password is required.</source>
+        <target>Mot de passe requis.</target>
+      </trans-unit>
+      <trans-unit id="password_minlength" datatype="html">
+        <source>Password must be at least 4 characters long.</source>
+        <target>Le mot de passe doit comporter au moins 4 caractères.</target>
+      </trans-unit>
+      <trans-unit id="agree_toc" datatype="html">
+        <source>Agree with Terms and Conditions</source>
+        <target>D'accord avec les termes et conditions</target>
+      </trans-unit>
+      <trans-unit id="signup" datatype="html">
+        <source>Sign Up</source>
+        <target>S'inscrire</target>
       </trans-unit>
     </body>
   </file>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SignupService } from '../_services/signup.service';
+import { SignupForm } from '../_classes/signup-form';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +15,7 @@ export class SignupComponent implements OnInit {
   emailInputFocus: boolean;
   passwordInputFocus: boolean;
 
-  constructor() {
+  constructor(private signupService: SignupService) {
     this.companyNameInputFocus = false;
     this.emailInputFocus = false;
     this.passwordInputFocus = false;
@@ -25,11 +27,10 @@ export class SignupComponent implements OnInit {
   onSubmit(): void {
     console.log("here is the form");
     console.log(JSON.stringify(this.model));
+    this.signupService.signup(this.model)
+      .subscribe((response) => {
+        console.log("Got this response from the Signup Service");
+        console.log(response);
+      })
   }
-}
-
-export class SignupForm {
-  companyName: string;
-  email: string;
-  password: string;
 }

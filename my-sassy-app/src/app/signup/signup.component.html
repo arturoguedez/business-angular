@@ -4,60 +4,61 @@
       <div class="form-signup">
 
         <img class="mb-4" src="assets/images/logo.png" alt="logo" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
-        <label for="companyName" class="sr-only">Company Name</label>
+        <h1 class="h3 mb-3 font-weight-normal" i18n="@@registration">Registration</h1>
+        <label for="companyName" class="sr-only" i18n="@@company_name">Company Name</label>
         <input [(ngModel)]="model.companyName" type="text" name="companyName" id="companyName" required minlength="2"
-          class="form-control" placeholder="Company Name" autofocus #companyName="ngModel" (focus)="companyNameInputFocus=true"
-          (blur)="companyNameInputFocus=false">
+          class="form-control" placeholder="Company Name" i18n-placeholder="label|@@company_name" autofocus
+          #companyName="ngModel" (focus)="companyNameInputFocus=true" (blur)="companyNameInputFocus=false">
         <div *ngIf="!companyNameInputFocus && companyName.invalid && (companyName.dirty || companyName.touched)"
           class="alert alert-danger">
           <div *ngIf="companyName.errors.required">
-            Company Name is required.
+            <ng-container i18n="error message|company name requirement@@company_name_required">Company Name is required.</ng-container>
           </div>
 
           <div *ngIf="companyName.errors.minlength">
-
-            <ng-container i18n="@@signup_company_name_error_minlength">Company Name must be at least 2 characters long.</ng-container>
+            <ng-container i18n="error message|company name length requirement@@company_name_minlength">Company Name must be at least 2 characters long.</ng-container>
           </div>
         </div>
 
         <label for="email" class="sr-only">Email address</label>
         <input [(ngModel)]="model.email" type="email" id="email" name="email" class="form-control" email required
-          placeholder="Email address" #email="ngModel" (focus)="emailInputFocus=true" (blur)="emailInputFocus=false">
+          placeholder="Email address" i18n-placeholder="label|@@email_address" #email="ngModel" (focus)="emailInputFocus=true"
+          (blur)="emailInputFocus=false">
 
         <div *ngIf="!emailInputFocus && email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
           <div *ngIf="email.errors.required">
-            Email is required.
+            <ng-container i18n="error message|email requirement@@email_required">Email is required.</ng-container>
           </div>
 
           <div *ngIf="email.errors.email">
-            Please enter a valid email
+            <ng-container i18n="error message|email format requirement@@email_format_invalid">Invalid email format</ng-container>
           </div>
         </div>
 
         <label for="password" class="sr-only">Password</label>
         <input [(ngModel)]="model.password" type="password" id="inputPassword" required minlength="4" name="password"
-          class="form-control" placeholder="Password" #password="ngModel" (focus)="passwordInputFocus=true"
-          (blur)="passwordInputFocus=false">
+          class="form-control" placeholder="Password" i18n-placeholder="label|@@password" #password="ngModel"
+          (focus)="passwordInputFocus=true" (blur)="passwordInputFocus=false">
 
         <div *ngIf="!passwordInputFocus && password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
-
           <div *ngIf="password.errors.required">
-            Password is required.
+            <ng-container i18n="error message|password requirement@@password_required">Password is required.</ng-container>
           </div>
           <div *ngIf="password.errors.minlength">
-            Password must be at least 4 characters long.
+            <ng-container i18n="error message|password length requirement@@password_minlength">Password must be at least 4 characters long.</ng-container>
           </div>
         </div>
 
         <div class="checkbox mb-3">
           <label>
-          <input type="checkbox" value="remember-me"> Agree with Terms and Conditions
+          <input type="checkbox" value="remember-me">
+          <ng-container i18n="@@agree_toc">Agree with Terms and Conditions</ng-container>
         </label>
         </div>
-        <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!signupForm.form.valid">Sign Up</button>
+        <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!signupForm.form.valid">
+          <ng-container i18n="button|signup button@@signup">Sign Up</ng-container>
+        </button>
         <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-
       </div>
     </div>
   </form>
