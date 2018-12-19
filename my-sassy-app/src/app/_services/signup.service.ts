@@ -17,7 +17,7 @@ const httpOptions = {
 export class SignupService {
 
   private baseUrl = 'http://localhost:3000/api';
-  private endpointUrl = this.baseUrl + '/v1/business/signup/';
+  private endpointUrl = this.baseUrl + '/v1/company/signup/';
 
   constructor(private http: HttpClient) { }
 
